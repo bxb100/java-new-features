@@ -1,6 +1,8 @@
 # Java New Features
 
+![GitHub Stars](https://img.shields.io/github/stars/wesleyegberto/java-new-features?style=flat-square)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/wesleyegberto/java-new-features)
+![License](https://img.shields.io/github/license/wesleyegberto/java-new-features?style=flat-square)
 
 A project to explore more about the new features from Java 8 through Java 21.
 
