@@ -287,10 +287,22 @@ jshell --enable-preview
 
 ## Migration Guide
 
+Checking dependencies on JDK internals APIs:
+
+```sh
+jdeps --jdk-internals -cp 'libs/*' myapp.jar
+```
+
 Checking deprecated APIs from a JDK version:
 
 ```sh
-jdeprscan --release <Jdk_Version> -l --for-removal
+jdeprscan -l --for-removal --release <Jdk_Version> --class-path 'libs/*' myapp.jar
+```
+
+Compare two dependencies to check for API differences with [`japicmp`](https://siom79.github.io/japicmp/):
+
+```sh
+java -jar japicmp.jar -o old-version.jar -n new-version.jar
 ```
 
 ## Helpful Links
@@ -304,6 +316,7 @@ jdeprscan --release <Jdk_Version> -l --for-removal
   * [Java Playground](https://dev.java/playground/)
 * [Inside.java - Sip of Java](https://inside.java/2021/10/21/sip24/)
 * [Learn.java](https://learn.java/)
+* [Java Evolved](https://javaevolved.github.io/)
 * Download Java versions:
   * [The Role of Preview Features in Java and Beyond](https://blogs.oracle.com/javamagazine/the-role-of-previews-in-java-14-java-15-java-16-and-beyond)
   * [Place to get early releases from Oracle's JDK](https://jdk.java.net/)
